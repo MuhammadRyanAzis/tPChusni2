@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Add your CSS code here */
+        .text-main-color {
+            color: #ff6363;
+        }
+
+        #dark-mode-toggle {
+            background-color: #ff6363;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        #menu-icon {
+            display: none;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            #menu-icon {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.9);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 2rem;
+            }
+        }        
+    </style>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-800 text-white">
+    <header class="fixed top-0 left-0 w-full p-4 flex justify-between items-center bg-transparent transition-opacity duration-300">
+        <button id="dark-mode-toggle" class="text-xl">Toggle Dark Mode</button>
+
+        <a href="#" class="text-3xl font-bold">Ryan.</a>
+        <i class='bx bx-menu text-4xl' id="menu-icon"></i>
+        <nav class="hidden md:flex space-x-8">
+            <a href="#home" class="text-xl">Home</a>
+            <a href="#services" class="text-xl">Skills</a>
+            <a href="#resume" class="text-xl">Resume</a>
+            <a href="#portofolio" class="text-xl">Portfolio</a>
+            <a href="#contact" class="text-xl">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="flex items-center justify-center min-h-screen p-10">
+        <div class="flex flex-col items-start max-w-lg">
+            <h1 class="text-5xl mb-4">Muhammad Ryan Azis</h1>
+            <h2 class="text-3xl mb-4">I'm a
+                <span class="text-main-color">Student</span>
+                <span class="text-main-color">Businessman</span>
+                <span class="text-main-color">Coder</span>
+            </h2>
+            <p class="mb-4">Saya <b>Muhammad Ryan Azis</b> adalah seorang <b>Pelajar</b> yang sedang menempuh pendidikan di SMK Telkom Malang. Saya memiliki minat yang besar dalam bidang teknologi dan bisnis.</p>
+            <div class="flex space-x-4">
+                <a href="https://github.com/MuhammadRyanAzis" class="text-2xl"><i class='bx bxl-github'></i></a>
+                <a href="#" class="text-2xl"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://discord.com/users/1292445964367302687" class="text-2xl"><i class='bx bxl-discord'></i></a>
+                <a href="https://www.instagram.com/ryanazis__/" class="text-2xl"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="flex justify-end">
+            <img src="Portofolio/me.html.jpg" alt="I'am" class="w-1/3 rounded-full">
+        </div>
+    </section>
+
+    <section id="services" class="min-h-screen p-10">
+        <h2 class="text-4xl mb-8">My <span class="text-main-color">Skills</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-2xl">Web Development</h3>
+                <p>Saya memiliki kemampuan Web Development yang sangat baik...</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-2xl">Robotik</h3>
+                <p>Saya memiliki kemampuan dalam bidang robotik yang kuat...</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+
+    <section id="resume" class="min-h-screen p-10">
+        <h2 class="text-4xl mb-8">Why Hire Me?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-2xl">Certificate</h3>
+                <p class="desc">Disini berisi beberapa deskripsi dari diri saya.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-2xl">Education</h3>
+                <p>My education details...</p>
+            </div>
+            <!-- Add more resume details as needed -->
+        </div>
+    </section>
+
+    <section id="portofolio" class="min-h-screen p-10">
+        <h2 class="text-4xl mb-8">Latest <span class="text-main-color">Project</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-2xl">Project Title</h3>
+                <p>Project description...</p>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code for smooth scrolling and other functionalities
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        function darkModeToggle() {
+            const body = document.getElementById('body');
+            if (body.classList.contains('bg-gray-100')) {
+                body.classList.remove('bg-gray-100', 'text-white');
+                body.classList.add('bg-gray-900', 'text-black');
+            } else {
+                body.classList.remove('bg-gray-900', 'text-white');
+                body.classList.add('bg-gray-100', 'text-black');
+            }
+        }
+    </script>
+</body>
+
+</html>
